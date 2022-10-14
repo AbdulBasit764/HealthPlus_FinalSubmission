@@ -1,0 +1,42 @@
+#home-banner{
+    background: url(../img/about_pic.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-banner h2{
+    color:  rgb(2, 75, 94);
+}
+
+.card{
+    border: none;
+}
+
+.first_heading h1 span{
+    color: rgba(2, 76, 94, 0.986);
+}
+
+
+/* counter css */
+.counter{
+    /* background-color: rgba(2, 76, 94, 0.493); */
+    background-image: linear-gradient(to right, 
+    rgba(255, 255, 255, 0.527), rgba(202, 202, 238, 0.233)), url(../img/about_2.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.work-name{
+    color: rgb(1, 61, 77);
+}
+
+.img1 .img{
+    border: 8px solid white;
+    box-shadow: 0 0 10px 1px rgba(4, 129, 170, 0.151) !important;
+    /* background-image: url('/img/doctor-7.jpeg'); */
+    border-radius: 15px;
+}

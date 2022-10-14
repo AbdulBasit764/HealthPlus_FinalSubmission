@@ -1,0 +1,41 @@
+#home-banner{
+    background: url(../img/appoit.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+
+}
+
+
+.information{
+    border-right: 1px solid rgba(189, 185, 185, 0.452);
+}
+
+#main-form{
+    /* box-shadow: 0 0 2px 1px grey; */
+    /* box-shadow: 0 0 15px 1px rgb(2 190 253 / 14%); */
+    position: relative;
+    top: -110px;
+}
+.form{
+    box-shadow: 0 0 15px 1px rgba(2, 190, 253, 0.055);
+
+
+}
+.input{
+    background-color: rgba(231, 229, 229, 0.39) !important;
+    border: none;
+}
+.form-control:focus{
+    background-color: rgba(231, 229, 229, 0.39);
+    box-shadow: 0 0 0 0 !important;
+    border: none;
+}
+
+.form-select{
+    background-color: rgba(231, 229, 229, 0.39);
+    border: none;
+}
+.form-select{
+    box-shadow: 0 0 0 0  !important;
+}

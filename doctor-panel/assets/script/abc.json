@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "text": "my msg",
+        "sent_by": "patient"
+    },
+    {
+        "id": "2",
+        "text": "How are you doctor sahab",
+        "sent_by": "patient"
+    },
+    {
+        "id": "1",
+        "text": "mein theek hun beemar admi, tu suna",
+        "sent_by": "doctor"
+    },
+    {
+        "id": "1",
+        "text": "tu phir beemar hogya be ?",
+        "sent_by": "doctor"
+    }
+]

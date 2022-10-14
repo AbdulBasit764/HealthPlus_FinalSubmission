@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f13a9149e6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="css/Journal.css"> -->
+    <link rel="stylesheet" href="css/allmedia.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <title>All Media</title>
+    <style>
+        .live-dr {
+            background-color: white;
+        }
+
+        .you {
+            position: absolute;
+            /* margin: 17px 18px; */
+            margin-top: 89px;
+            margin-left: 16px;
+            background-color: rgba(0, 0, 0, 0.26);
+
+            padding: 5px 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 7px;
+        }
+
+        .all-func {
+            position: relative;
+            /* margin-top: 400px; */
+            /* margin-left: 160px; */
+            top: -66px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .call {
+            background-color: rgba(211, 28, 28, 0.747) !important;
+
+        }
+
+        .border-radius {
+            border-radius: 15px;
+        }
+
+        .calls-func {
+            background-color: rgba(0, 0, 0, 0.644);
+            color: white;
+            border-radius: 50%;
+        }
+
+        .sight-card {
+            height: 84vh;
+            overflow-y: auto;
+        }
+
+        .attendence p {
+            background-color: rgba(136, 236, 136, 0.185);
+            color: #03c34d;
+
+            padding: 1px 16px !important;
+            border-radius: 7px;
+            font-weight: bold;
+
+        }
+
+        .absent p {
+            background-color: rgba(236, 136, 136, 0.185);
+            color: rgb(209, 25, 25);
+            padding: 1px 16px !important;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .share-link {
+            background-color: rgba(136, 236, 136, 0.185);
+            color: #03c34d;
+            padding: 6px 37px !important;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .share-link h6 {
+            color: #03c34d;
+            font-size: 14px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+        <!-- notification Sidebar start -->
+        <div style="z-index: 103100; top: 0%; opacity: 0.5; width: 100%; height: 100%; position: fixed; background-color: black; display: none;"
+            id="overay"></div>
+        <div id="mySidenav" class="sidenav">
+            <div class="p-3">
+                <div class="p-2 row px-0 ">
+                    <div class="w-75 d-flex align-items-center">
+                        <h5 class="my-0">Dr. Response Alert</h5>
+                    </div>
+                    <div class="w-25  d-flex  justify-content-end">
+                        <i onclick="closeNav()" class="material-icons fs-3  text-secondary" style="cursor: pointer;"
+                            title="Add new translation">
+                            close
+                        </i>
+                    </div>
+                </div>
+                <hr>
+                <div id="all_notification">
+                    <div class="mt-3" id='noti_2-1'>
+                        <div class="border text-left w-100 radius-10 notification-card my-2">
+                            <div class="">
+                                <div class="row px-3 mt-2  text-secondary" style="font-size: 18px !important;">
+                                    <div class="w-75">
+                                        <small class="">Course Update</small>
+                                    </div>
+                                    <div class="w-25  d-flex justify-content-end align-items-center">
+                                        <i class="material-icons mk-pointer" onclick=`remove(1)`
+                                            id='noti1-1' style="font-size: 18px;">cancel</i>
+                                    </div>
+                                </div>
+                                <small class="mx-3 mt-1 font-size text-secondary">2022</small>
+                            </div>
+                            <div class="card-body py-3 pt-2 my-0">
+                                <p class="card-text" style="font-size: 12px !important;">
+                                    THANK YOU! For Contacting Us Your Registration has beed Successfull.Your Class Start 02/01/2023 Your id id is #ST551
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Notification sidebar end -->
+
+
+
+        <div class="main-navbar">
+            <header class="py-3 bg-white header-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex w-25 col-sm-2 align-items-center header_1 ">
+                            <ul class="nav    justify-content-center mb-md-0">
+                                <a href="index.html">
+                                    <img src="img/logo.png" id="logo" width="230" alt="">
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="w-75 justify-content-end align-items-center d-flex social-link ">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item ">
+                                    <a href="user-chatroom.html" class="nav-linkd mx-2  text-none d-flex align-items-center">
+                                        <i class="material-icons fs-3">forum</i>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="#" onclick="openNav()"
+                                        class="nav-linkd  r-border px-2 text-none d-flex align-items-center">
+                                        <div id="notifications"></div>
+                                        <i class="material-icons border-end px-3 fs-3">notifications</i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-linkd r-border  text-none d-flex align-items-center">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown mx-2 user_profile_dp">
+                                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    <strong>Abdul Basit</strong>
+                                </a>
+                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                    <li><a class="dropdown-item" href="#">Sign in</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+
+                           
+                            <i class="material-icons fs-1 menu" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                                style="cursor: pointer; display: none;">menu</i>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+        </div>
+
+            <!-- Header 2 -->
+            <div class="bg-white" style="box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.068) ;">
+                <div class="container " id="header_2">
+                    <header class=" header-2 bg-white row ">
+                        <ul class="nav  col-md-8">
+                            <li class="nav-item"><a href="index.html" class="nav-link other-page py-3 ">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link other-page py-3">About Us</a></li>
+    
+                            <li class="nav-item" id="services"><a href="services.html"
+                                    class="nav-link d-flex other-page py-3">Services
+                                </a></li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link other-page py-3">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="doctorSearch.html" class="nav-link other-page  py-3">Doctors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="course.html" class="nav-link other-page  py-3 ">Courses</a>
+                            </li>
+                        </ul>
+                        <div class=" col-md-4 d-flex align-items-center justify-content-end">
+                            <button type="button" class="btn btn-outline-primary mx-2 text-primary sign_in">Sign-in</button>
+                            <a href="sign_up.html" class="text-decoration-none">
+                                <button type="button" class="btn btn-primary ">Sign-up / Register</button>
+                            </a>                       
+                         </div>
+                    </header>
+                </div>
+            </div>
+            <!-- header-2 -->
+
+
+
+            
+    <div id="all_body" class="m-0" style="display: none;">
+
+
+        <!-- Offcanvas Side Bar-->
+        <div class="offcanvas offcanvas-start p-0 m-0"
+            style="background: white !important; width: auto; z-index: 100000 !important;" tabindex="-1"
+            id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <!-- <div class="offcanvas-body"> -->
+            <div class="offcanvas-body d-flex flex-column flex-shrink-0 m-0 text-white p-0" style="width: 280px;">
+
+                <div class="d-flex flex-column flex-shrink-0 p-3   bg-white"
+                    style="width: 280px;  height: 100vh !important;">
+                    <a href="index.html"
+                        class="d-flex align-items-center mb-3 link-dark justify-content-center text-decoration-none">
+
+                        <img src="img/logo.png" width="200" alt="">
+                    </a>
+                    <hr class="bg-dark mt-0">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="d-flex align-items-center my-3 nav-link side-link link-dark"
+                                aria-current="page">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <i class="material-icons fs-2">home</i><span class="mx-3"> Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                <i class="material-icons fs-2">dashboard</i> <span class="mx-3">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                <i class="material-icons fs-2">note_alt</i> <span class="mx-3">Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <i class="material-icons fs-2">support_agent</i> <span class="mx-3">Contact</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <hr class="bg-dark">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/team-3.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                            <strong>Abdul Basit</strong>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="#">Sign in</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Main Content Start -->
+        <div class="container my-4">
+            <div class="row px-4 mx-0">
+                <div class="col-md-8 px-0 ">
+                    <div class="live-dr card  p-3" style="border-radius: 15px;">
+                        <div class="row align-items-center mb-3">
+                            <div class="course_head col-sm-8 ">
+                                <p class="p-0 m-0 ">Class 2nd</p>
+                                <h4 class="p-0 m-0 ">Skin Sepcialization</h4>
+                            </div>
+                            <div class="time_count  col-sm-4 text-end ">
+                                <small class="d-block p-0 m-0">Time remaining</small>
+                                <div class="d-flex align-items-center justify-content-end mx-2">
+                                    <i class="material-icons fs-5 p-0 m-0 text-danger">fiber_manual_record</i>
+                                    <b class="p-0 m-0 " id="meet_counter"></b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="you">
+                            <p class="p-0 m-0">you</p>
+                        </div>
+                        <img src="/img/video_call.jpg" class="w-100" style="border-radius: 15px;" alt="">
+                        <!-- <video src="img/training.mp4" class="border-radius" autoplay ></video> -->
+                        <div class=" all-func">
+                            <i class="material-icons fs-3 cr-pointer calls-func p-2 mx-2 m-0">mic</i>
+                            <i class="material-icons fs-3 cr-pointer calls-func p-2 mx-2 m-0">videocam</i>
+                            <i class="material-icons fs-3 cr-pointer calls-func p-2 call mx-2 m-0"
+                                style="transform: scale(1.3);">call</i>
+                            <i class="material-icons fs-3 cr-pointer calls-func p-2 mx-2 m-0">mood</i>
+                            <i class="material-icons fs-3 cr-pointer calls-func p-2 mx-2 m-0">fullscreen</i>
+                        </div>
+                        <div class="d-flex align-items-center"  style="margin-bottom: -85px;"> 
+                            
+                            <img src="img/team-1.jpg" class="rounded-circle " style="border: 3px solid white;"
+                                width="55" height="55" alt="">
+                            <div class="mx-2">
+                                <a href="dr-profile.html" class="text-decoration-none text-dark">
+                                <h6 class="m-0 p-0">Dr. Syed Abdul Basit</h6>
+                                <p class="m-0 p-0 text-secondary">(MBBS, PHD)</p>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 all_students">
+                    <div class="p-3 card text-start sight-card" style="border-radius: 15px;">
+                        <p>Meeting Participants <b id="participants">(1)</b></p>
+                        <input type="text" class="form-control text-center" placeholder="search participants">
+                        <hr class="bg-dark">
+                        <div id="student_img">
+                            <div class="my-2">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="material-icons fs-3">badge</i>
+                                    <h6 class="p-0 m-0 mx-2">Abdul Basit</h6>
+                                </div>
+                                <img src="/img/video_call.jpg" class="w-100 border-radius" alt="">
+                                <i class="material-icons p-2 fs-5 cr-pointer cr-pointer" style="    border-radius: 50%; background: rgba(31, 214, 107, 0.658); color: white;
+                        position: absolute;
+                        left: 19px;
+                        margin: 12px;">record_voice_over</i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <div class="spinner">
+        <div class="spinner-border text-info" role="status">
+        </div>
+        <!-- <span class="fs-5 text-secondary mx-2">Loading...</span> -->
+    </div>
+
+
+    <script>
+
+
+        let count = 45
+        let count_1 = 1;
+        let name = 'Syed Basit'
+
+         let add_img = setInterval(() => {
+            count_1++;
+
+            console.log(count_1);
+            let student_img = `
+                            <div class="my-2">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="material-icons fs-3">badge</i>
+                                    <h6 class="p-0 m-0 mx-2">${name}</h6>
+                                </div>
+                                <img src= 'img/st_${count_1}.jpg' style="height: 170px;" class="w-100 border-radius" alt="">
+                                <i class="material-icons p-2 fs-5 cr-pointer" style="border-radius: 50%; background: rgba(214, 31, 31, 0.753); color: white;
+                            position: absolute;
+                            left: 19px;
+                            margin: 12px;">mic_off</i>
+                            </div>
+                                    `
+            document.getElementById('student_img').innerHTML += student_img
+            document.getElementById('participants').innerHTML = '(' + count_1 + ')'
+            if (count_1 == 7) {
+                clearInterval(add_img)
+            }
+        }, 5000);
+
+        setInterval(() => {
+            count--;
+            if (count == 0) {
+                count = 60
+            }
+            // $('.time').html(count)
+            document.getElementById('meet_counter').innerHTML = '10 ' + ': ' + count + ': 00'
+        }, 1000);
+        
+    </script>
+
+    <script src="Script/sidebar.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="Script/navbar.js"></script>
+    <script src="Script/notification.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+
+        function copy_link() {
+            $('#link').show()
+            setTimeout(() => {
+                $('#link').fadeOut(150)
+            }, 2000);
+        }
+
+        let count = 61
+        let count_1 = 1;
+        let name = 'Syed Basit'
+
+        function goLive() {
+            $('#going_call').show();
+            // document.getElementById('going_call').style.display = ''
+            $('#goLiveBtn').addClass('display')
+            let ring = setInterval(() => {
+                document.getElementById('voice').play()
+            }, 100);
+            setTimeout(() => {
+                // setTimeout(() => {
+                let add_img = setInterval(() => {
+                    count_1++;
+                    // let students_data =   `/img/st_${count_1}.jpg`
+                    // console.log(students_data);
+
+                    let student_img = `
+                            <div class="my-2">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="material-icons">badge</i>
+                                    <h6 class="p-0 m-0 mx-2">${name}</h6>
+                                </div>
+                                <img src= '/img/st_${count_1}.jpg' style="height: 170px;" class="w-100 border-radius" alt="">
+                                <i class="material-icons p-2 fs-5 cr-pointer" style="border-radius: 50%; background: rgba(214, 31, 31, 0.753); color: white;
+                            position: absolute;
+                            left: 19px;
+                            margin: 12px;">mic_off</i>
+                            </div>
+                                    `
+                    document.getElementById('student_img').innerHTML += student_img
+                    document.getElementById('attendee').innerHTML = count_1
+                    document.getElementById('participants').innerHTML = '(' + count_1 + ')'
+                    if (count_1 == 7) {
+                        clearInterval(add_img)
+                    }
+                }, 5000);
+                // }, 1500);
+                clearInterval(ring)
+                $('#going_call').hide();
+                $('#main_img').show()
+                $('.all-func').show()
+                document.getElementById('voice').pause()
+                $('#time').show()
+                setInterval(() => {
+                    count--;
+                    if (count == 0) {
+                        count = 60
+                    }
+                    // $('.time').html(count)
+                    document.getElementById('meet_counter').innerHTML = '10 ' + ': ' + count + ': 00'
+                }, 1000);
+                if (count < 0) {
+                    return count;
+                }
+            }, 10000);
+        }
+
+
+    </script> -->
+

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Dashboard</title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/journal.css">
+    <style>
+        .form-control, select {
+            background-color: rgba(231, 229, 229, 0.39) !important;
+            border: none !important;
+        }
+        select:focus{
+            box-shadow: 0 0 0 3px rgba(3, 111, 138, 0.349) !important;
+            border-color: black !important;
+        }
+        .form-control:focus{
+            box-shadow: 0 0 0 3px rgba(3, 111, 138, 0.349) !important;
+            border: none !important;
+        }
+        /* .form-control:active{
+            border-color: rgba(243, 243, 243, 0.39) !important;
+        } */
+    </style>
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+    id="sidenav-main">
+    <div class="sidenav-header text-center py-3 my-3" style=" height: 200px;">
+        <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+            aria-hidden="true" id="iconSidenav"></i>
+        <div class="">
+            <img src="/img/about_4.jpeg" class="rounded-circle " width="90" height="90" alt="main_logo" />
+        </div>
+        <div class="my-3">
+            <h4>Dr. Muneem Khan</h4>
+            <p>BDS, MDS - Oral & MBBS</p>
+        </div>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/dashboard.html">
+                    <div
+                        class="icon  icon-sm shadow border-radius-md bg-white text-center me-2  d-flex align-items-center justify-content-center">
+                        <i class="material-icons fs-5">dashboard</i>
+                    </div>
+                    <span class="nav-link-text ms-1 mx-2">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/tables.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 ">fact_check</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Appointment's</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/d-chatroom.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons d-block fs-6">forum</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Messages</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/billing.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 mb-2">manage_accounts</i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Billing</span>
+                </a>
+            </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Courses</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active-1 active" href="../pages/addCourse.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 mb-2">post_add</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Add new Course</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/doctor_view_course.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 mb-2">cloud_upload</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Recent Upload Course</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/students_registration.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 mb-2">how_to_reg</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Registered Students</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/live_stream.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5 mb-1">video_call</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Start Live Sessions</span>
+                </a>
+            </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link  active" href="../pages/profile.html">
+                    <div
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons p-0 m-0 fs-5">person</i>
+
+                    </div>
+                    <span class="nav-link-text ms-1">Profile</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</aside>
+
+
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+        <!-- Navbar -->
+        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+            navbar-scroll="true">
+            <div class="container-fluid py-1 px-3">
+                <nav aria-label="breadcrumb">
+                    <input class="form-control me-2" type="search" placeholder="Search more...">
+                </nav>
+                <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                    <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                    </div>
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+                                <i class="fa fa-user me-sm-1"></i>
+                                <span class="d-sm-inline d-none">log Out</span>
+                            </a>
+                        </li>
+                        <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item px-3 d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-body p-0">
+                                <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="alert" class="container mt-3"></div>
+
+        <div class="row mx-3 mt-4">
+            <div class="col-12 ">
+                <div class="card mb-4" style="border-left: 7px solid rgba(5, 91, 112, 0.788);">
+                    <div class="card-header " style="border-radius: 15px 15px;">
+                        <h6>Add Course Form</h6>
+                        <hr class="bg-dark">
+                    </div>
+                    <div class="px-4">
+                            <div class="row" style="margin-top: -18px;">
+                                <div class="col-sm-6 ">
+                                    <label for="inputEmail4" class="form-label">Institute Name</label>
+                                    <input type="text" value="Dewan University" class="form-control" id="institutename" placeholder="Title" aria-label="First name"
+                                        >
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <label for="inputEmail4" class="form-label">Institute Email</label>
+                                    <input type="text" class="form-control" id="email" value="syedbasithassan33@gmail.com" placeholder="Enter Email" >
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 my-2">
+                                    <label for="inputEmail4" class="form-label">Course Title</label>
+                                    <input type="text" class="form-control" value="Specialization" id="courseTitle" placeholder="Course Title" >
+                                </div>
+                                <div class="col-sm-6 my-2">
+                                    <label for="inputEmail4" class="form-label">Category</label>
+                                    <select class="form-select" id="selectCotegory" aria-label="Default select example">
+                                        <option selected class="text-secondary " aria-label="Disabled select example"
+                                            disabled>Select Category</option>
+                                        <option value="Dermotologist">Dermotologist</option>
+                                        <option value="Anesthesiology">Anesthesiology</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3 my-2">
+                                    <label for="inputEmail4" class="form-label">Add Duration</label>
+                                    <input type="text" class="form-control" value="1year" id="durationCourse" placeholder="e.i  3 to 6 months" >
+                                </div>
+                                <div class="col-sm-3 my-2">
+                                    <label for="inputEmail4" class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" id="date"  >
+                                </div>
+                                <div class="col-sm-3 my-2">
+                                    <label for="inputEmail4" class="form-label">Class Timing</label>
+                                    <input type="text" class="form-control" value="1:00pm to 5:00pm" id="classTiming" placeholder="i.e  3 to 5">
+                                </div>
+                                <div class="col-sm-3 my-2">
+                                    <label for="inputEmail4" class="form-label">Add Thumbnail</label>
+                                    <input type="text" id='imageAttach' class="form-control" >
+                                </div>
+                                <div class="col-sm-6 my-2">
+                                    <label for="inputEmail4" class="form-label">Accesable Students</label>
+                                    <input type="text" class="form-control" id="educaion" value="masters" placeholder="i.e  Intermediate / xyz "
+                                        >
+                                </div>
+                                <div class="col-sm-6 my-2">
+                                    <label for="inputEmail4" class="form-label">About Thise Course</label>
+                                    <textarea class="form-control" placeholder="Leave a comment here"
+                                        id="dsc" style="height: 100px"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" onclick="AddCourseForm()"
+                                class="btn px-3 btn-primary my-4 d-flex align-items-center">
+                                Add Course
+                                <i class="material-icons mx-1">add</i>
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+   
+    <!--   Core JS Files   -->
+    <!-- <script src="../assets/js/core/popper.min.js"></script> -->
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <!-- <script src="../assets/js/plugins/chartjs.min.js"></script> -->
+    <script src="../pages/addcourse.js"></script>
+    <script>
+        var win = navigator.platform.indexOf("Win") > -1;
+        if (win && document.querySelector("#sidenav-scrollbar")) {
+            var options = {
+                damping: "0.5",
+            };
+            Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.6"></script>
+
+   
+
+</body>
+
+</html>

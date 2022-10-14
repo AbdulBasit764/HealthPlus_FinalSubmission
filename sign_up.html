@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/journal.css">
+
+
+    <title>Registration/Sign_up</title>
+    <style>
+        body {
+            background-color: rgb(252, 252, 252);
+        }
+
+        #left_img {
+            background: url('img/sign_upimg.jpg') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            border-radius: 0px 45px 45px 0;
+        }
+
+        .form-label {
+            font-size: 13px;
+            font-weight: bold;
+            color: rgb(70, 69, 69);
+        }
+
+        .google_continue {
+            font-size: 15px;
+            color: grey;
+            font-weight: 400;
+        }
+
+        .cr-pointer {
+            cursor: pointer;
+        }
+
+        .heading {
+            color: rgb(0, 95, 124);
+        }
+
+        .befor {
+            width: 38%;
+            height: 1px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        .after {
+            width: 38%;
+            height: 1px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        .form-select:focus {
+            box-shadow: 0 0 0 3px rgb(1 96 117 / 21%) !important;
+            border-color: rgb(1 96 117 / 21%) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom ">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <img src="img/logo.png" width="200" alt="">
+                
+
+
+            </a>
+
+            <ul class="nav nav-pills mx-5">
+                <li class="nav-item mt-2">
+                    <h6 class="p-0 m-0">Alredy using? <a href="#" class="text-primary">Signin</a> </h6>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="row my-2 px-5">
+            <div class="col-md-4">
+                <span class="fs-1 heading">Create an account</span>
+                <div class="my-4">
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">lock</i>
+                        <p class="mx-3 text-secondary">Secure payments through reliable partners</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">outbox</i>
+                        <p class="mx-3 text-secondary">Fast transfers</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">payments</i>
+                        <p class="mx-3 text-secondary">Fair commisions</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">account_circle</i>
+                        <p class="mx-3 text-secondary">Best available rates </p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">record_voice_over</i>
+                        <p class="mx-3 text-secondary">Conveniens</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="material-icons fs-4 text-primary">auto_stories</i>
+                        <p class="mx-3 text-secondary">Medical Courses Available for medical students</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row px-4">
+                    <div class="col-sm-6 my-1">
+                        <label for="inputEmail4" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First name" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <label for="inputEmail4" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" placeholder="syedabdulbasit764@gmail.com" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <label for="validationDefault04" class="form-label">Doctor / User</label>
+                        <select onchange="select()" class="form-select" id="select" required>
+                            <option selected disabled value="">Doctor / User</option>
+                            <option>Doctor</option>
+                            <option>User</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 my-1 doctor">
+                        <label for="inputEmail4" class=" form-label">Card Number</label>
+                        <input type="number" class="form-control" placeholder="0001-95440255-1" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1 doctor">
+                        <label for="inputEmail4" class=" form-label">Expiry</label>
+                        <input type="text" class="form-control" placeholder="YY/MM" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <label for="inputEmail4" class="form-label">Confirm Password</label>
+                        <input type="password"  placeholder="Password" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-6 my-1">
+                        <label for="inputEmail4" class="form-label">Confirm Password</label>
+                        <input type="password" placeholder="Confirm password" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-sm-12 my-1">
+                        <label for="inputEmail4" class="form-label">Address</label>
+                        <input type="text" placeholder="Street #5 Sec b" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="mt-3 mx-2 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <p class="form-check-label text-secondary" for="exampleCheck1">By creating an account
+                            , You agree to the <b> Terms of Service and <br> Condictions, and Privacy Policy. </b>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mx-4">
+                    <button type="button" class=" btn btn-primary">Create account</button>
+                </div>
+
+                <div class="mt-4 d-flex align-items-center justify-content-center">
+                    <div class="befor mb-3"></div>
+                    <p class="text-center text-secondary mx-2" style="font-size: 22px;">Or</p>
+                    <div class="after mb-3"></div>
+
+                </div>
+
+                <div class="d-flex justify-content-evenly mt-1 flex-wrap">
+                    <div
+                        class="google_continue border p-2 rounded-3 my-1 cr-pointer d-flex align-items-center justify-content-center">
+                        <img src="img/google.png" width="50" alt="">
+                        <p class="p-0 m-0 px-3 py-2 text-secondary fw-bold">Continue with google</p>
+                    </div>
+                    <div
+                        class="google_continue border p-2 rounded-3 my-1 cr-pointer d-flex align-items-center justify-content-center">
+                        <img src="img/link.png"  width="50" alt="">
+                        <p class="p-0 m-0 px-3 py-2 text-secondary fw-bold">Continue with linkedin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+
+        $('.doctor').hide()
+        // $('.doctor').css('display', 'block')
+        function select() {
+            let value = $('#select').val();
+            if (value == 'Doctor') {
+                $('.doctor').show()
+            } else {
+                $('.doctor').hide()
+            }
+            console.log(value);
+        }
+    </script>
+
+
+</body>
+
+</html>

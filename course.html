@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+
+    <title>Courses</title>
+
+    <style>
+        .category-btns{
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.99, -0.100, 0.265, 1);
+            border-bottom: none;
+        }
+        .active-cotegory{
+            background-color: rgba(5, 91, 112, 0.76);
+            color: white;
+            box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.144);
+            transition: all 0.2s cubic-bezier(0.99, -0.100, 0.265, 1);
+
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <!-- notification Sidebar start -->
+    <div style="z-index: 103100; top: 0%; opacity: 0.5; width: 100%; height: 100%; position: fixed; background-color: black; display: none;"
+        id="overay"></div>
+    <div id="mySidenav" class="sidenav">
+        <div class="p-3">
+            <div class="p-2 row px-0 ">
+                <div class="w-75 d-flex align-items-center">
+                    <h5 class="my-0">Dr. Response Alert</h5>
+                </div>
+                <div class="w-25  d-flex  justify-content-end">
+                    <i onclick="closeNav()" class="material-icons fs-3  text-secondary" style="cursor: pointer;"
+                        title="Add new translation">
+                        close
+                    </i>
+                </div>
+            </div>
+            <hr>
+            <div id="all_notification">
+                <div class="mt-3" id='noti_2-1'>
+                    <div class="border text-left w-100 radius-10 notification-card my-2">
+                        <div class="">
+                            <div class="row px-3 mt-2  text-secondary" style="font-size: 18px !important;">
+                                <div class="w-75">
+                                    <small class="">Course Update</small>
+                                </div>
+                                <div class="w-25  d-flex justify-content-end align-items-center">
+                                    <i class="material-icons mk-pointer" onclick=`remove(1)`
+                                        id='noti1-1' style="font-size: 18px;">cancel</i>
+                                </div>
+                            </div>
+                            <small class="mx-3 mt-1 font-size text-secondary">2022</small>
+                        </div>
+                        <div class="card-body py-3 pt-2 my-0">
+                            <p class="card-text" style="font-size: 12px !important;">
+                                THANK YOU! For Contacting Us Your Registration has beed Successfull.Your Class Start 02/01/2023 Your id id is #ST551
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Notification sidebar end -->
+
+
+
+    <div class="main-navbar">
+        <header class="py-3 bg-white header-1">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex w-25 col-sm-2 align-items-center header_1 ">
+                        <ul class="nav    justify-content-center mb-md-0">
+                            <a href="index.html">
+                                <img src="img/logo.png" id="logo" width="230" alt="">
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="w-75 justify-content-end align-items-center d-flex social-link ">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item ">
+                                <a href="user-chatroom.html"
+                                    class="nav-linkd mx-2  text-none d-flex align-items-center">
+                                    <i class="material-icons fs-3">forum</i>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a href="#" onclick="openNav()"
+                                    class="nav-linkd  r-border px-2 text-none d-flex align-items-center">
+                                    <div id="notifications"></div>
+                                    <i class="material-icons border-end px-3 fs-3">notifications</i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a href="#" class="nav-linkd r-border  text-none d-flex align-items-center">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown mx-2 user_profile_dp">
+                            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                                id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                    class="rounded-circle me-2">
+                                <strong>Abdul Basit</strong>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                <li><a class="dropdown-item" href="#">Sign in</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+
+
+                        <i class="material-icons fs-1 menu" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                            style="cursor: pointer; display: none;">menu</i>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Header 2 -->
+    <div class="bg-white" style="box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.068) ;">
+        <div class="container " id="header_2">
+            <header class=" header-2 bg-white row ">
+                <ul class="nav  col-md-8">
+                    <li class="nav-item"><a href="index.html" class="nav-link other-page py-3 ">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link other-page py-3">About Us</a></li>
+
+                    <li class="nav-item" id="services"><a href="services.html"
+                            class="nav-link d-flex other-page py-3">Services
+                        </a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link other-page py-3">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctorSearch.html" class="nav-link other-page  py-3">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="course.html" class="nav-link other-page  py-3 active-1">Courses</a>
+                    </li>
+                </ul>
+                <div class=" col-md-4 d-flex align-items-center justify-content-end">
+                    <button type="button" class="btn btn-outline-primary mx-2 text-primary sign_in">Sign-in</button>
+                    <a href="sign_up.html" class="text-decoration-none">
+                        <button type="button" class="btn btn-primary ">Sign-up / Register</button>
+                    </a>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- header-2 -->
+
+
+
+    <div id="all_body" style="display: none;">
+        <!-- Offcanvas Side Bar-->
+        <div class="offcanvas offcanvas-start p-0 m-0"
+            style="background: white !important; width: auto; z-index: 100000 !important;" tabindex="-1"
+            id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <!-- <div class="offcanvas-body"> -->
+            <div class="offcanvas-body d-flex flex-column flex-shrink-0 m-0 text-white p-0" style="width: 280px;">
+
+                <div class="d-flex flex-column flex-shrink-0 p-3   bg-white"
+                    style="width: 280px;  height: 100vh !important;">
+                    <a href="index.html"
+                        class="d-flex align-items-center mb-3 link-dark justify-content-center text-decoration-none">
+
+                        <img src="img/logo.png" width="200" alt="">
+                    </a>
+                    <hr class="bg-dark mt-0">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="d-flex align-items-center my-3 nav-link side-link link-dark"
+                                aria-current="page">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <i class="material-icons fs-2">home</i><span class="mx-3"> Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                <i class="material-icons fs-2">dashboard</i> <span class="mx-3">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                <i class="material-icons fs-2">note_alt</i> <span class="mx-3">Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <i class="material-icons fs-2">support_agent</i> <span class="mx-3">Contact</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <hr class="bg-dark">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/team-3.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                            <strong>Abdul Basit</strong>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="#">Sign in</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Banner -->
+        <div id="banner" class="container">
+            <div class="row mt-4">
+                <h2 class="">Search more course</h2>
+
+                <div class="col-md-5 my-2">
+                    <div class="input-group m-0">
+                        <span class="input-group-text material-icons fs-3 py-0 bg-none m-0"
+                            id="basic-addon1">search</span>
+                        <input type="text" class="form-control" placeholder="Search doctor or categry"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-4 my-2">
+                    <div class="input-group m-0 ">
+                        <span class="input-group-text material-icons fs-3 py-0 m-0" id="basic-addon1">location_on</span>
+                        <input type="text" class="form-control " placeholder="Collage/Uiversity/Hospital"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-md-3 my-2">
+                    <button type="button" class=" btn bg-none btn-primary  py-2">Search</button>
+
+                </div>
+
+            </div>
+            
+
+        <div class="my-5">
+            <div class="d-flex">
+                <div id="Dermotologist" onclick="catogery('Dermotologist')" class="border-end border-start border-top active-cotegory p-3 align-items-center category-btns ">
+                    <h6 class="p-0 m-0">Dermotologist</h6>
+                </div>
+                <div id="Anesthesiology" onclick="catogery('Anesthesiology')" class="mx-1 border-end border-start border-top p-3 align-items-center category-btns">
+                    <h6 class="p-0 m-0">Anesthesiology</h6>
+                </div>
+                <div id="Chiropractice"  class="mx-1 border-end border-start border-top p-3 align-items-center category-btns">
+                    <h6 class="p-0 m-0">Chiropractice</h6>
+                </div>
+                <div id="Neontology"  class="mx-1 border-end border-start border-top p-3 align-items-center category-btns">
+                    <h6 class="p-0 m-0">Neontology</h6>
+                </div>
+                <div id="Proctology"  class="mx-1 border-end border-start border-top p-3 align-items-center category-btns">
+                    <h6 class="p-0 m-0">Proctology</h6>
+                </div>
+                 <div id="Chiropractice"  class="mx-1 border-end border-start border-top p-3 align-items-center category-btns">
+                    <h6 class="p-0 m-0">Chiropractice</h6>
+                </div>
+
+            </div>
+            <hr class="m-0 p-0" style="color: rgb(182, 182, 182);">
+        </div>
+
+
+        </div>
+
+        <div class="container">
+            <div class="row my-3 mt-3 all_cards" id="category_1">
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_2.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-1.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. faroqui</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_1.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-2.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Syed Basit</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_4.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-4.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Muneem</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_5.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-3.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Faroqui</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_6.jfif" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/doctor-9.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Ruqsana</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="Anesthesiology row my-3 mt-4 all_cards_2" id="category_2">
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_9.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-1.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Muneem</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_8.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-2.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Touqeer</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_9.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/team-3.jpg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Syed Maazin</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            
+
+                <div class="col-md-3 my-3">
+                    <a href="enrollNow.html" class="text-decoration-none text-dark" target="_blank">
+                        <div class="card text-start">
+                            <img class="card-img-top course-img" height="220px" src="img/course_2.jpg" alt="Title">
+                            <div class="p-2">
+                                <div class="d-flex align-items-center my-2 ">
+                                    <img src="img/doctor-5.jpeg" class="rounded-circle" width="45" height="45" alt="">
+                                    <div class="mx-1">
+                                        <h6 class="p-0 m-0 mx-2">Dr. Gaffar</h6>
+                                        <!-- <p style="font-size: 12px;" class="text-secondary p-0 m-0">MBBS, PHD, MASTERS</p> -->
+                                        <div class="d-flex  align-items-center ">
+                                            <i class="material-icons mx-1 fs-5 text-warning">star</i>
+                                            <h6 class="p-0 m-0 ">4.6</h6>
+                                            <p class="p-0 m-0 text-secondary mx-1"> (231 reviews)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center my-2 mt-3">
+                                    <img src="img/uni_logo.png" width="50" alt="">
+                                    <p class="text-secondary p-0 mx-1 m-0 fw-bold">Rice University</p>
+                                </div>
+                                <div>
+                                    <p class="p-0 m-0 text-secondary mb-2">
+                                        Spanish for successfull communication in healthcare...
+                                    </p>
+                                    <p class="p-0 m-0 text-secondary mx-1">Intermediat-Course. 1-3 Months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center" style="margin-top: 55px;">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link text-dark" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+          <!-- footer -->
+
+          <footer  style="margin-top: -200px;">
+            <div  class=" px-0 py-0  bg-light footer" id="hanging-icons">
+
+                <div class="row g-4 m-0 py-5 row-cols-1 row-cols-lg-3" style="margin-top: -100px !important;">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class=" text-center">
+                            <a href="index.html" class="text-decoration-none">
+                                <img src="img/logo.png" width="75%" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3  d-flex align-items-start">
+                        <div class="">
+                            <h3 class="py-2">About</h3>
+                            <p>The physical examination is the examination of the patient for medical signs of disease,
+                                which are objective and observable, in contrast to symptoms that are volunteered by the
+                                patient and not necessarily objectively observable.[12]
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-start">
+
+                        <div class="">
+                            <h3 class="py-2">Address</h3>
+                            <p class="d-flex "><i class="material-icons fs-2 ">location_on</i> Saba Avenue
+                                DHA Karachi Pakistan plot/282</p>
+                            <p class="d-flex "><i class="material-icons fs-2 ">call</i> +92318-2171364</p>
+                            <p class="d-flex "><i class="material-icons fs-2 ">mail</i>Syedabdulbasit764@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-start">
+
+                        <div class="">
+                            <h3 class="py-2">Social Link</h3>
+                            <div>
+                                <a class="text-decoration-none" href="https://www.facebook.com" target="_blank">
+                                    <img src="img/facebook.png" width="55" alt="">
+                                </a>
+                                <a class="text-decoration-none" href="https://www.linkedin.com" target="_blank">
+                                    <img src="img/link.png" width="65" alt="">
+                                </a>
+                                <a class="text-decoration-none" href="https://www.twitter.com" target="_blank">
+                                    <img src="img/twitter.png" width="65" alt="">
+                                </a>
+                            </div>
+                            <div class="my-3">
+
+                                <a class="text-decoration-none" href="https://www.google.com" target="_blank">
+                                    <img src="img/google.png" width="65" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+
+
+    </div>
+
+
+
+
+
+    <div class="spinner">
+        <div class="spinner-border text-info" role="status">
+        </div>
+        <!-- <span class="fs-5 text-secondary mx-2">Loading...</span> -->
+    </div>
+
+
+ <script>
+
+
+$('#category_2').hide()
+    function catogery(type) {
+        console.log(type);
+        $('.category-btns').removeClass('active-cotegory')
+        $(`.all_cards`).hide()
+        $(`#${type}`).addClass('active-cotegory')
+        if (type == 'Dermotologist') {
+        $(`.all_cards_2`).hide()
+        $(`.all_cards`).show()
+        }
+        $(`.${type}`).show()
+    }
+
+ </script>
+    <script src="Script/user_view_course.js"></script>
+    <script src="Script/sidebar.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="Script/navbar.js"></script>
+    <script src="Script/notification.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+#home-banner{
+    background: url(../img/contact.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-card{
+    border-bottom: 5px solid rgb(2, 75, 92);
+    border: none;
+    box-shadow: 0 0 15px 1px rgb(2 190 253 / 13%) !important;
+}
+
+.support-btn{
+    border-radius: 20px;
+    background: rgba(2, 76, 92, 0.233) !important;
+    color: rgb(2, 75, 92);
+    border: 1px solid rgba(2, 76, 92, 0.226);
+    font-weight: 500;
+}
+.support-btn:focus{
+    background: rgba(2, 76, 92, 0.233) !important;
+    color: rgb(2, 75, 92);
+    border: 1px solid rgba(2, 76, 92, 0.226);
+}
+.support-btn:hover{
+    background: rgba(2, 76, 92, 0.233) !important;
+    color: rgb(2, 75, 92);
+    border: 1px solid rgba(2, 76, 92, 0.226);
+}
+
+#all-card-support{
+    position: relative;
+    top: -100px;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 3px rgba(2, 69, 83, 0.233) !important;
+}
+
+.captcha{
+    border: none !important;
+}

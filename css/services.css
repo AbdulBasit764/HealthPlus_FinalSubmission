@@ -1,0 +1,90 @@
+#home-banner{
+    background: url(../img/service.jpg) no-repeat center;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-banner h2{
+    color:  rgb(2, 75, 94);
+}
+
+.card{
+    border: none;
+}
+
+.first_heading h1 span{
+    color: rgba(2, 76, 94, 0.986);
+}
+
+
+.service-card{
+    border: 10px solid white;
+    box-shadow: 0 0 15px 1px rgba(2, 190, 253, 0.068);
+    border-radius: 25px;
+}
+
+/* counter css */
+.counter{
+    /* background-color: rgba(2, 76, 94, 0.493); */
+    background-image: linear-gradient(to right, 
+    rgba(255, 255, 255, 0.527), rgba(202, 202, 238, 0.233)), url(img/about_2.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.work-name{
+    color: rgb(1, 61, 77);
+}
+
+.b1{
+    width: 55%;
+    height: 25vh;
+    padding-left: 15px;
+    padding-top: 65px;
+    padding-right: 20px;
+}
+
+
+.btns{
+    background-color: rgb(4, 122, 122);
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.btns:hover{
+ background-color: rgb(8, 175, 175) !important; 
+    
+}
+
+.card-title{
+    color: rgb(9, 138, 138);
+    padding-left: 10px;
+}
+
+
+.btn-primary{
+    background-color: rgba(5, 91, 112, 0.788);
+    border: none;
+}
+.btn-primary:hover{
+    background-color: rgb(5, 91, 112);
+}
+
+
+.font{
+    padding-top: 30px;
+    font-size: 60px;
+    color: rgb(6, 172, 172);
+}
+
+.color{
+    color: rgba(1, 95, 116, 0.945);
+}
+
+
+
+ 

@@ -1,0 +1,254 @@
+.c-pointer{
+  cursor: pointer;
+}
+
+.font-size{
+  font-size: 9px !important;
+}
+
+.active{
+  background-color: rgba(15, 98, 233, 0.89);
+}
+
+.upload_file{
+  border: 2px dashed grey;
+}
+
+.border-radius {
+  border-radius: 8px;
+}
+
+.border-radius1 {
+  border-radius: 13px !important;
+}
+
+.border-radius-left {
+  border-radius: 0 8px 8px 0;
+}
+
+.margin-top {
+  margin-top: 25px !important;
+}
+
+.padding-left {
+  padding-left: 25px !important;
+}
+
+.mt-5 {
+  margin-top: -1rem !important;
+}
+
+.table-margin {
+  margin: -20px 0px;
+}
+
+.font-size {
+  font-size: 13px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.btn-font-size {
+  font-size: 12px;
+  height: 30px;
+}
+
+.subheading {
+  font-size: 13px;
+  color: grey;
+}
+
+
+/* .form-control {
+  width: 0px !important;
+  height: 45px;
+  z-index: 1 !important;
+} */
+
+.suggestion-card {
+  padding: 14px;
+}
+
+.input-group-text {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(216, 212, 212);
+  border-top: 1px solid rgb(216, 212, 212);
+  border-right: 1px solid rgb(216, 212, 212);
+  z-index: 1 !important;
+}
+
+.side-input {
+  width: 70% !important;
+}
+
+.nav-link {
+  margin: 9px -19px;
+  padding: 8px 0px;
+}
+
+.nav-link:focus .icon {
+  color: rgba(39, 84, 230, 0.781) !important;
+}
+
+.nav-link:focus {
+  background: rgba(128, 128, 128, 0.562) !important;
+}
+
+.icon-list {
+  display: flex;
+}
+
+.dropdown-item:hover {
+  background: rgba(17, 109, 247, 0.89) !important;
+  color: white;
+}
+
+.dropdown-item:active {
+  background: rgba(12, 92, 212, 0.89) !important;
+  color: white;
+}
+
+.icon-list li {
+  list-style: none;
+}
+
+.fa-magnifying-glass {
+  color: rgb(175, 171, 171);
+  z-index: 1 !important;
+}
+
+#search_input input {
+  border: none;
+  border-bottom: 1px solid rgb(216, 212, 212);
+  border-top: 1px solid rgb(216, 212, 212);
+  border-left: 1px solid rgb(216, 212, 212);
+  z-index: 100 !important;
+}
+
+#search_input input:focus {
+  box-shadow: 0 0 0 0;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0 10px;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  background: rgba(58, 91, 201, 0.815);
+  height: 4px;
+  width: 0%;
+  left: 0;
+  bottom: -19px;
+  transition: 0.4s;
+}
+
+
+.side-input{
+  border-radius: 7px 0px 0px 7px !important;
+}
+
+.nav-item:focus::after {
+  /* color: rgba(35, 76, 211, 0.911) !important; */
+  width: 100%;
+}
+
+.nav-item:focus .icon {
+  color: rgba(35, 76, 211, 0.911) !important;
+  /* width: 100%; */
+}
+
+/* header Styling End*/
+
+@media screen and (max-width: 993px) {
+  .dropdown-btn{
+    display: none;
+  }
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    background: rgba(58, 91, 201, 0.815);
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -11px;
+    transition: 0.4s;
+  }
+  .menu {
+    display: none !;
+  }
+  #nav_btn {
+    display: none;
+  }
+  .col-sm-5 {
+    width: 50%;
+    display: flex;
+    align-items: center !important;
+    /* margin-top: 15px; */
+  }
+  .log-out {
+    display: none;
+  }
+  .col-sm-3 {
+    width: 50%;
+  }
+  .icon-list {
+    width: 50%;
+    display: flex !important;
+    justify-content: start !important;
+    margin-right: -3px !important;
+  }
+
+  .fa-solid {
+    font-size: 30px !important;
+  }
+  .searching {
+    display: none !important;
+  }
+  #bars {
+    display: block !important;
+    cursor: pointer;
+    font-size: 30px !important;
+  }
+  .profile-pic {
+    display: block !important;
+    margin-right: 15px;
+  }
+  .drop1 {
+    display: none;
+  }
+  .col-sm-5 li {
+    width: 50%;
+    /* padding: 5px; */
+    display: flex !important;
+    align-items: center !important;
+    align-items: center !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .col-sm-5 li .icon{
+    font-size: 20px!important;
+    padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .fa-house,
+  .fa-users,
+  .fa-list,
+  .fa-comments-dollar,
+  .fa-bell {
+    font-size: 25px !important;
+    padding: 10px;
+  }
+  /* .nav-link {
+    margin: 9px -19px !important;
+    padding: 50px 0px !important;
+  } */
+}

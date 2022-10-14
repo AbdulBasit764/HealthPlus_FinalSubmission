@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+
+
+
+    <title>Service's</title>
+</head>
+
+<body>
+
+
+        <!-- notification Sidebar start -->
+
+        <div style="z-index: 103100; top: 0%; opacity: 0.5; width: 100%; height: 100%; position: fixed; background-color: black; display: none;"
+            id="overay"></div>
+
+        <div id="mySidenav" class="sidenav">
+            <div class="p-3">
+                <div class="p-2 row px-0 ">
+                    <div class="w-75 d-flex align-items-center">
+                        <h5 class="my-0">Dr. Response Alert</h5>
+                    </div>
+                    <div class="w-25  d-flex  justify-content-end">
+                        <i onclick="closeNav()" class="material-icons fs-3  text-secondary" style="cursor: pointer;"
+                            title="Add new translation">
+                            close
+                        </i>
+                    </div>
+                </div>
+                <hr>
+                <div id="all_notification">
+                    <div class="mt-3" id='noti_2-1'>
+                        <div class="border text-left w-100 radius-10 notification-card my-2">
+                            <div class="">
+                                <div class="row px-3 mt-2  text-secondary" style="font-size: 18px !important;">
+                                    <div class="w-75">
+                                        <small class="">Course Update</small>
+                                    </div>
+                                    <div class="w-25  d-flex justify-content-end align-items-center">
+                                        <i class="material-icons mk-pointer" onclick=`remove(1)`
+                                            id='noti1-1' style="font-size: 18px;">cancel</i>
+                                    </div>
+                                </div>
+                                <small class="mx-3 mt-1 font-size text-secondary">2022</small>
+                            </div>
+                            <div class="card-body py-3 pt-2 my-0">
+                                <p class="card-text" style="font-size: 12px !important;">
+                                    THANK YOU! For Contacting Us Your Registration has beed Successfull.Your Class Start 02/01/2023 Your id id is #ST551
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Notification sidebar end -->
+
+
+
+        <div class="main-navbar">
+            <header class="py-3 bg-white header-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex w-25 col-sm-2 align-items-center header_1 ">
+                            <ul class="nav    justify-content-center mb-md-0">
+                                <a href="index.html">
+                                    <img src="img/logo.png" id="logo" width="230" alt="">
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="w-75 justify-content-end align-items-center d-flex social-link ">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item ">
+                                    <a href="user-chatroom.html" class="nav-linkd mx-2  text-none d-flex align-items-center">
+                                        <i class="material-icons fs-3">forum</i>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="#" onclick="openNav()"
+                                        class="nav-linkd  r-border px-2 text-none d-flex align-items-center">
+                                        <div id="notifications"></div>
+                                        <i class="material-icons border-end px-3 fs-3">notifications</i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="#" class="nav-linkd r-border  text-none d-flex align-items-center">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown mx-2 user_profile_dp">
+                                <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                                    id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                        class="rounded-circle me-2">
+                                    <strong>Abdul Basit</strong>
+                                </a>
+                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                    <li><a class="dropdown-item" href="#">Sign in</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+
+                           
+                            <i class="material-icons fs-1 menu" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+                                style="cursor: pointer; display: none;">menu</i>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+        </div>
+
+            <!-- Header 2 -->
+            <div class="bg-white" style="box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.068) ;">
+                <div class="container " id="header_2">
+                    <header class=" header-2 bg-white row ">
+                        <ul class="nav  col-md-8">
+                            <li class="nav-item"><a href="index.html" class="nav-link other-page py-3 ">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link other-page py-3">About Us</a></li>
+    
+                            <li class="nav-item" id="services"><a href="services.html"
+                                    class="nav-link d-flex other-page py-3 active-1">Services
+                                </a></li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link other-page py-3">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="doctorSearch.html" class="nav-link other-page  py-3">Doctors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="course.html" class="nav-link other-page  py-3 ">Courses</a>
+                            </li>
+                        </ul>
+                        <div class=" col-md-4 d-flex align-items-center justify-content-end">
+                            <button type="button" class="btn btn-outline-primary mx-2 text-primary sign_in">Sign-in</button>
+                            <a href="sign_up.html" class="text-decoration-none">
+                                <button type="button" class="btn btn-primary ">Sign-up / Register</button>
+                            </a>
+                        </div>
+                    </header>
+                </div>
+            </div>
+            <!-- header-2 -->
+
+        
+        <!-- header-2 -->
+
+
+
+        <div id="all_body" style="display: none;">
+        <!-- Offcanvas Side Bar-->
+        <div class="offcanvas offcanvas-start p-0 m-0"
+            style="background: white !important; width: auto; z-index: 100000 !important;" tabindex="-1"
+            id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <!-- <div class="offcanvas-body"> -->
+            <div class="offcanvas-body d-flex flex-column flex-shrink-0 m-0 text-white p-0" style="width: 280px;">
+
+                <div class="d-flex flex-column flex-shrink-0 p-3   bg-white"
+                    style="width: 280px;  height: 100vh !important;">
+                    <a href="index.html"
+                        class="d-flex align-items-center mb-3 link-dark justify-content-center text-decoration-none">
+
+                        <img src="img/logo.png" width="200" alt="">
+                    </a>
+                    <hr class="bg-dark mt-0">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="d-flex align-items-center my-3 nav-link side-link link-dark"
+                                aria-current="page">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <i class="material-icons fs-2">home</i><span class="mx-3"> Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                <i class="material-icons fs-2">dashboard</i> <span class="mx-3">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                <i class="material-icons fs-2">note_alt</i> <span class="mx-3">Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <i class="material-icons fs-2">support_agent</i> <span class="mx-3">Contact</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <hr class="bg-dark">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                                class="rounded-circle me-2">
+                            <strong>Abdul Basit</strong>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="#">Sign in</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Home Banner -->
+
+        <div id="home-banner">
+            <h2 class="fw-bold text-dark">Home / <span class="color-1 fw-bold ">Services</span></h2>
+        </div>
+
+        <!-- Other Heading -->
+        <div class="container">
+        </div>
+
+        <!-- MOhsin Services Work -->
+
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">medication_liquid</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Medical Store</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">king_bed</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">5k Beds</h5>
+                            <p class="p-0 m-0 text-secondary">MMedicine means a place or premises for pharmacy business
+                                permitted
+                                by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">bloodtype</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Blood Bank</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">monitor_heart</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Heart Specialist</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the/p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-md-3  my-3">
+                    <div class=" service-card p-2">
+
+                        <i class="material-icons ">vaccines</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Top Equipment</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class=" service-card p-2">
+
+                        <i class="material-icons ">queue_play_next</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Heart Machine</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">design_services</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Services</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 my-3 ">
+                    <div class="card service-card p-2">
+
+                        <i class="material-icons ">psychology</i>
+                        <div class="my-2">
+                            <h5 class="p-0 text-primary my-2 m-0">Psychology Services</h5>
+                            <p class="p-0 m-0 text-secondary">Medicine store means a place or premises for pharmacy
+                                business permitted by
+                                the</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Midd Img -->
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="row m-0 p-0 my-5">
+                    <div class="col-md-6 p-0">
+                        <img class="w-100 border-radius" src="img/charity.png">
+                    </div>
+
+                    <div class="col-md-6 p-5 my-auto">
+                        <h1>We help need <span class="text-primary">charity</span> people</h1>
+                        <h4 class="text-primary">Unique Problems in Our Research</h4>
+                        <p class="text-secondary">Get Results for Cancer Hospital New York. Find Results from Multiple
+                            Sources.
+                            Search for Cancer Hospital New York and Discover Millions of Results.
+                            All the Answers. Multiple Sources Combined. Easy Access Information.
+                            Fast and Trusted. Simple in Use. Discover Us Now! Types: News, Video.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5 my-5">
+            <div class="row m-0 p-0 ">
+
+
+                <div class="col-md-6  my-auto">
+                    <h1 class="">Best care for good health with <span class="text-primary">HealthPlus</span></h1>
+                    <h4 class="text-primary">Unique Problems in Our Research</h4>
+                    <p class="text-secondary">Get Results for Cancer Hospital New York. Find Results from Multiple
+                        Sources.
+                        Search for Cancer Hospital New York and Discover Millions of Results.
+                        All the Answers. Multiple Sources Combined. Easy Access Information.
+                        Fast and Trusted. Simple in Use. Discover Us Now! Types: News, Video.</p>
+                </div>
+                <div class="col-md-6 p-0">
+                    <img class="w-100 border-radius" src="img/charity_2.png">
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Midd Img -->
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="row m-0 p-0 my-5">
+                    <div class="col-md-6 p-0">
+                        <img class="w-100 border-radius" src="img/img_1.png">
+                    </div>
+                    <div class="col-md-6 p-5 my-auto">
+                        <h1>We Diagnose & Treat</h1>
+                        <h4 class="text-primary">Unique Problems in Our Research</h4>
+                        <p class="text-secondary">Get Results for Cancer Hospital New York. Find Results from Multiple
+                            Sources.
+                            Search for Cancer Hospital New York and Discover Millions of Results.
+                            All the Answers. Multiple Sources Combined. Easy Access Information.
+                            Fast and Trusted. Simple in Use. Discover Us Now! Types: News, Video.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row m-0 p-0 mt-5" style="margin-top: 120px !important;">
+
+
+                <div class="col-md-6  my-auto">
+                    <h1>Best care for good health</h1>
+                    <h4 class="text-primary">Unique Problems in Our Research</h4>
+                    <p class="text-secondary">Get Results for Cancer Hospital New York. Find Results from Multiple
+                        Sources.
+                        Search for Cancer Hospital New York and Discover Millions of Results.
+                        All the Answers. Multiple Sources Combined. Easy Access Information.
+                        Fast and Trusted. Simple in Use. Discover Us Now! Types: News, Video.</p>
+                </div>
+                <div class="col-md-6 p-0">
+                    <img class="w-100 border-radius" src="img/about_5.png">
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- footer -->
+
+        <footer>
+            <div class=" px-0 py-0 mt-5 bg-light footer" id="hanging-icons">
+
+                <div class="row g-4 m-0 py-5 row-cols-1 row-cols-lg-3" style="margin-top: -100px !important;">
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <div class=" text-center">
+                            <a href="index.html" class="text-decoration-none">
+                                <img src="img/logo.png" width="75%" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3  d-flex align-items-start">
+                        <div class="">
+                            <h3 class="py-2">About</h3>
+                            <p>The physical examination is the examination of the patient for medical signs of disease,
+                                which are objective and observable, in contrast to symptoms that are volunteered by the
+                                patient and not necessarily objectively observable.[12]
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-start">
+
+                        <div class="">
+                            <h3 class="py-2">Address</h3>
+                            <p class="d-flex "><i class="material-icons fs-2 ">location_on</i> Saba Avenue
+                                DHA Karachi Pakistan plot/282</p>
+                            <p class="d-flex "><i class="material-icons fs-2 ">call</i> +92318-2171364</p>
+                            <p class="d-flex "><i class="material-icons fs-2 ">mail</i>Syedabdulbasit764@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-start">
+
+                        <div class="">
+                            <h3 class="py-2">Social Link</h3>
+                            <div>
+                                <a class="text-decoration-none" href="https://www.facebook.com" target="_blank">
+                                    <img src="img/facebook.png" width="55" alt="">
+                                </a>
+                                <a class="text-decoration-none" href="https://www.linkedin.com" target="_blank">
+                                    <img src="img/link.png" width="65" alt="">
+                                </a>
+                                <a class="text-decoration-none" href="https://www.twitter.com" target="_blank">
+                                    <img src="img/twitter.png" width="65" alt="">
+                                </a>
+                            </div>
+                            <div class="my-3">
+
+                                <a class="text-decoration-none" href="https://www.google.com" target="_blank">
+                                    <img src="img/google.png" width="65" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <div class="spinner">
+        <div class="spinner-border text-info" role="status">
+        </div>
+        <!-- <span class="fs-5 text-secondary mx-2">Loading...</span> -->
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="Script/navbar.js"></script>
+    <script src="Script/sidebar.js"></script>
+    <script src="Script/notification.js"></script>
+
+
+
+</body>
+
+
+<script>
+
+    setInterval(() => {
+        $('.spinner').hide();
+        $('#all_body').show();
+    }, 900);
+
+    let counter = 1;
+
+
+
+
+    $('#searching').click(function () {
+        $('#search').show(150);
+    });
+
+
+
+</script>
+
+</html>

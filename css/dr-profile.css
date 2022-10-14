@@ -1,0 +1,86 @@
+.dr-profile-img img{
+    border-radius: 15px;
+}
+
+.dr-dp img{
+    /* position: absolute; */
+    /* border: 3px solid white; */
+    box-shadow: 0 0 5px 0 rgba(128, 128, 128, 0.459);
+    border-radius: 15px;
+}
+
+.dr-dp{
+    background-color: rgba(255, 255, 255, 0.582);
+    backdrop-filter: blur(8px);
+    margin: -84px 0px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px 0 rgba(7, 7, 7, 0.048);
+    /* width: 80%; */
+}
+.chat-btn{
+    border-radius: 50px;
+    box-shadow: 0 5px 15px 0 rgba(2, 2, 2, 0.137);
+    background-color: rgba(196, 196, 196, 0.555) !important;
+}
+
+.chat-btn:focus{
+    box-shadow: 0 5px 15px 0 rgba(2, 2, 2, 0.137);
+}
+
+.bg-light{
+    background-color: rgba(196, 196, 196, 0.329) !important;
+    border-radius: 30px;
+}
+
+.font-size-2{
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+}
+
+.available-tag-time{
+    border-radius: 10px;
+}
+
+.font{
+    font-size: 13px;
+}
+
+.service{
+    box-shadow: 0 5px 15px 0 rgba(12, 12, 12, 0.089);
+    border-radius: 15px;
+    position: sticky;
+    /* top: 100px; */
+}
+
+
+
+.font-2{
+    font-size: 14px !important;
+    color: rgb(75, 74, 74);
+    font-weight: 400;
+}
+
+.profile-feedback{
+    box-shadow: 0 5px 15px 0 rgba(12, 12, 12, 0.089);
+    border-radius: 15px !important;
+}
+
+@media screen and (max-width: 770px) {
+    #doctor_data{
+        margin-top: 100px !important;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .reviewer_name{
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .doctor-dp{
+        padding: 0px 4px !important;
+    }
+}

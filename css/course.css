@@ -1,0 +1,29 @@
+/* #banner{
+     background:linear-gradient( to top, rgba(255, 255, 255, 0.918), rgba(0, 0, 0, 0)),
+     url(/img/course_back.jpg) no-repeat center;
+     background-size: cover;
+     height: 500px;
+     width: 100%;
+} */
+
+body{
+    background-color: rgba(219, 221, 223, 0.123);
+}
+
+.course-img{
+    border-radius: 13px 13px 0 0;
+}
+
+
+.card{
+    border-radius: 13px;
+    transition: 0.2s;
+    cursor: pointer;
+    /* height: 420px; */
+}
+
+.card:hover{
+    box-shadow: 0 5px 15px 0 rgba(0, 88, 170, 0.171);
+    transition: 0.2s;
+}
+

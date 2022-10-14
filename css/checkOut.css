@@ -1,0 +1,14 @@
+body{
+    background-color: rgba(219, 221, 223, 0.123);
+}
+
+.form-label{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(34, 33, 33, 0.76);
+}
+
+.form-control:focus ,.form-select:focus{
+    box-shadow:  0 0 0 3px rgba(5, 91, 112, 0.233);
+    border-color: rgba(5, 91, 112, 0.233);
+}
