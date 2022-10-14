@@ -12,3 +12,12 @@ body{
     box-shadow:  0 0 0 3px rgba(5, 91, 112, 0.233);
     border-color: rgba(5, 91, 112, 0.233);
 }
+
+
+#payment-card{
+    border-bottom: 2px dashed rgb(161, 160, 160);
+}
+#payment-card i{
+    background: linear-gradient( 310deg, rgba(1, 71, 88, 0.452) 0%, rgba(5, 91, 112, 0.788) 100% );
+
+}

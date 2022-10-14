@@ -3,7 +3,7 @@ let counter = 1;
 setInterval(() => {
   $(".spinner").hide();
   $("#all_body").show();
-}, 700);
+}, 700); //700 mili second
 
 // let get_confirm_msg = localStorage.getItem("response");
 let confirm_reg_msg = localStorage.getItem("confirm_reg_msg");

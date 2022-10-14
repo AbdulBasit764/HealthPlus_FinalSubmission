@@ -295,6 +295,22 @@
                                 <i class="material-icons fs-2">support_agent</i> <span class="mx-3">Contact</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="doctorSearch.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <i class="material-icons fs-2">medication</i> <span class="mx-3">Doctors</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="course.html" class="d-flex align-items-center my-3 nav-link side-link link-dark">
+                                <svg class="bi me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <i class="material-icons fs-2">auto_stories</i> <span class="mx-3">Courses</span>
+                            </a>
+                        </li>
 
 
                     </ul>
@@ -314,7 +330,9 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
+
         </div>
 
 
@@ -471,75 +489,4 @@
 
 
 
-
-    <!-- <script>
-
-        function copy_link() {
-            $('#link').show()
-            setTimeout(() => {
-                $('#link').fadeOut(150)
-            }, 2000);
-        }
-
-        let count = 61
-        let count_1 = 1;
-        let name = 'Syed Basit'
-
-        function goLive() {
-            $('#going_call').show();
-            // document.getElementById('going_call').style.display = ''
-            $('#goLiveBtn').addClass('display')
-            let ring = setInterval(() => {
-                document.getElementById('voice').play()
-            }, 100);
-            setTimeout(() => {
-                // setTimeout(() => {
-                let add_img = setInterval(() => {
-                    count_1++;
-                    // let students_data =   `/img/st_${count_1}.jpg`
-                    // console.log(students_data);
-
-                    let student_img = `
-                            <div class="my-2">
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="material-icons">badge</i>
-                                    <h6 class="p-0 m-0 mx-2">${name}</h6>
-                                </div>
-                                <img src= '/img/st_${count_1}.jpg' style="height: 170px;" class="w-100 border-radius" alt="">
-                                <i class="material-icons p-2 fs-5 cr-pointer" style="border-radius: 50%; background: rgba(214, 31, 31, 0.753); color: white;
-                            position: absolute;
-                            left: 19px;
-                            margin: 12px;">mic_off</i>
-                            </div>
-                                    `
-                    document.getElementById('student_img').innerHTML += student_img
-                    document.getElementById('attendee').innerHTML = count_1
-                    document.getElementById('participants').innerHTML = '(' + count_1 + ')'
-                    if (count_1 == 7) {
-                        clearInterval(add_img)
-                    }
-                }, 5000);
-                // }, 1500);
-                clearInterval(ring)
-                $('#going_call').hide();
-                $('#main_img').show()
-                $('.all-func').show()
-                document.getElementById('voice').pause()
-                $('#time').show()
-                setInterval(() => {
-                    count--;
-                    if (count == 0) {
-                        count = 60
-                    }
-                    // $('.time').html(count)
-                    document.getElementById('meet_counter').innerHTML = '10 ' + ': ' + count + ': 00'
-                }, 1000);
-                if (count < 0) {
-                    return count;
-                }
-            }, 10000);
-        }
-
-
-    </script> -->
 

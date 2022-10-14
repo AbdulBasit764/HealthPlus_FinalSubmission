@@ -49,6 +49,10 @@ body{
 
 }
 
+.send_msg_from_dr{
+    border-radius: 50px !important;
+}
+
 .heading-size{
     font-size: 17px;
     font-weight: 600;
@@ -183,7 +187,7 @@ body{
 .send-input{
     border: 3px solid rgb(230, 226, 226) !important;
     width: 100% !important;
-    border-radius: 0px !important;
+    border-radius: 50px !important;
 }
 
 .send{
